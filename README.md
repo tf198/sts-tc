@@ -1,4 +1,8 @@
-sts-tc
-======
+SmashTheStack Toolchain
+=======================
 
-My SmashTheStack toolchain
+My scripts for wargames
+
+Note
+~~~~
+Dont look at the XXX.pass files unless you want the passwords
